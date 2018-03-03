@@ -143,7 +143,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    /*nokey*/       Key_H,            Key_J,        Key_K,     Key_L,      Key_Semicolon, Key_RightShift,
    Key_Backspace,  Key_N,            Key_M,        Key_Comma, Key_Period, Key_Slash,     Key_Minus,
    Key_RightShift, Key_RightControl, Key_Spacebar, Key_RightAlt,
-   LockLayer(FUNCTION)),
+   ShiftToLayer(FUNCTION)),
 
 
   [NUMPAD] =  KEYMAP_STACKED
