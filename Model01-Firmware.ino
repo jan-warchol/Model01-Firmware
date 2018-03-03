@@ -133,8 +133,8 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] = KEYMAP_STACKED
   (___,             Key_1,         Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick,    Key_Q,         Key_W,       Key_E, Key_R, Key_T, Key_Tab,
-   Key_PageUp,      Key_A,         Key_S,       Key_D, Key_F, Key_G,
-   Key_PageDown,    Key_Z,         Key_X,       Key_C, Key_V, Key_B, Key_Escape,
+   ___,             Key_A,         Key_S,       Key_D, Key_F, Key_G,
+   ___,             Key_Z,         Key_X,       Key_C, Key_V, Key_B, Key_Escape,
    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
@@ -169,11 +169,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,      Key_Delete,      ___,         ___,
    ___,
 
-   Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
-   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
-   /*nokey*/                   Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  ___,              ___,
-   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
-   ___,                        ___,                    Key_Enter,                ___,
+   Consumer_ScanPreviousTrack, Key_F6,                   Key_F7,                   Key_F8,                Key_F9,          Key_F10,          Key_F11,
+   Consumer_PlaySlashPause,    Consumer_ScanNextTrack,   Key_LeftCurlyBracket,     Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, Key_F12,
+   /*nokey*/                   Consumer_VolumeIncrement, Key_LeftArrow,            Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   ___,
+   Key_PcApplication,          Consumer_VolumeDecrement, Consumer_Mute,            Key_PageDown,          Key_PageUp,      Key_Backslash,    Key_Pipe,
+   ___,                        ___,                      Key_Enter,                ___,
    ___)
 
 };
