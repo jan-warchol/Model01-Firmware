@@ -162,7 +162,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (Key_Escape, Key_F1,          Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,
+  (Key_Escape, Key_F1,          Key_F2,      Key_F3,     Key_F4,        Key_F5,           Key_F12,
    Key_Tab,    ___,             Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
    ___,        Key_mouseL,      Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,
    ___,        ___,             Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  ___,
@@ -170,7 +170,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,
 
    Key_F11,    Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          ___,
-   Key_F12,    Key_Equals,               Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, LockLayer(NUMPAD),
+   ___,    Key_Equals,               Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, LockLayer(NUMPAD),
    /*nokey*/   Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
    ___,        Consumer_VolumeDecrement, Key_Home,             Key_PageUp,            Key_PageDown,    Key_End,          Key_Semicolon,
    ___,        ___,                      ___,                  ___,
