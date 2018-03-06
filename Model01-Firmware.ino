@@ -139,7 +139,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         LockLayer(NUMPAD),
-   Key_Enter,      Key_Equals,       Key_U,        Key_I,     Key_O,      Key_J,         Key_B,
+   Key_Enter,      Key_B,            Key_U,        Key_I,     Key_O,      Key_J,         Key_B,
    /*nokey*/       Key_Y,            Key_N,        Key_R,     Key_L,      Key_H, Key_RightShift,
    Key_Backspace,  Key_P,            Key_M,        Key_K,     Key_Period, Key_Slash,     Key_Minus,
    Key_RightShift, Key_RightControl, Key_Spacebar, Key_RightAlt,
@@ -169,11 +169,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,        ___,             ___,         ___,
    ___,
 
-   Consumer_ScanPreviousTrack, Key_F6,                   Key_F7,                   Key_F8,                Key_F9,          Key_F10,          Key_F11,
-   Consumer_PlaySlashPause,    Consumer_ScanNextTrack,   Key_LeftCurlyBracket,     Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, Key_F12,
-   /*nokey*/                   Consumer_VolumeIncrement, Key_LeftArrow,            Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
-   Key_Delete,                 Consumer_VolumeDecrement, Key_Home,                 Key_PageDown,          Key_PageUp,      Key_End,          Key_Pipe,
-   ___,                        ___,                      ___,                      ___,
+   Consumer_ScanPreviousTrack, Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          Key_F11,
+   Consumer_PlaySlashPause,    Key_Equals,               Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, Key_F12,
+   /*nokey*/                   Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
+   Key_Delete,                 Consumer_VolumeDecrement, Key_Home,             Key_PageDown,          Key_PageUp,      Key_End,          Key_Semicolon,
+   ___,                        ___,                      ___,                  ___,
    ___)
 
 };
