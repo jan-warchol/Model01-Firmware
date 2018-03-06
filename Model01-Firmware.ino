@@ -138,7 +138,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftAlt,   Key_LeftControl, Key_LeftGui, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
-   M(MACRO_ANY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         LockLayer(NUMPAD),
+   M(MACRO_ANY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         Key_Delete,
    Key_Enter,      Key_B,            Key_U,        Key_I,     Key_O,      Key_J,         Key_B,
    /*nokey*/       Key_Y,            Key_N,        Key_R,     Key_L,      Key_H, Key_RightShift,
    Key_Backspace,  Key_P,            Key_M,        Key_K,     Key_Period, Key_Slash,     Key_Minus,
@@ -165,15 +165,15 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   (Key_Escape, Key_F1,          Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,
    Key_Tab,    ___,             Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
    ___,        Key_mouseL,      Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,
-   ___,        Key_PrintScreen, Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_Delete,
+   ___,        ___,             Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  ___,
    ___,        ___,             ___,         ___,
    ___,
 
-   Consumer_ScanPreviousTrack, Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          Key_F11,
-   Consumer_PlaySlashPause,    Key_Equals,               Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, Key_F12,
-   /*nokey*/                   Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
-   Key_Delete,                 Consumer_VolumeDecrement, Key_Home,             Key_PageDown,          Key_PageUp,      Key_End,          Key_Semicolon,
-   ___,                        ___,                      ___,                  ___,
+   Key_F11,    Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          ___,
+   Key_F12,    Key_Equals,               Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, LockLayer(NUMPAD),
+   /*nokey*/   Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
+   ___,        Consumer_VolumeDecrement, Key_Home,             Key_PageDown,          Key_PageUp,      Key_End,          Key_Semicolon,
+   ___,        ___,                      ___,                  ___,
    ___)
 
 };
