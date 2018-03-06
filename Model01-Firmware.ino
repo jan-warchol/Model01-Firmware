@@ -172,7 +172,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_F11,    Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          ___,
    Key_F12,    Key_Equals,               Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, LockLayer(NUMPAD),
    /*nokey*/   Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
-   ___,        Consumer_VolumeDecrement, Key_Home,             Key_PageDown,          Key_PageUp,      Key_End,          Key_Semicolon,
+   ___,        Consumer_VolumeDecrement, Key_Home,             Key_PageUp,            Key_PageDown,    Key_End,          Key_Semicolon,
    ___,        ___,                      ___,                  ___,
    ___)
 
