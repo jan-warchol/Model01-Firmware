@@ -135,7 +135,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Tab,       Key_Q,           Key_W,       Key_D, Key_F, Key_Comma, Key_Tab,
    Key_LeftShift, Key_A,           Key_S,       Key_E, Key_T, Key_G,
    Key_Backslash, Key_Z,           Key_X,       Key_X, Key_C, Key_V, Key_Backspace,
-   Key_LeftAlt,   Key_LeftControl, Key_LeftGui, Key_LeftShift,
+   Key_LeftAlt,   Key_LeftControl, Key_LeftGui, LCTRL(Key_LeftShift),
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         Key_Delete,
