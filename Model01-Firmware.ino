@@ -121,7 +121,7 @@ enum { MACRO_VERSION_INFO,
   *
   */
 
-enum { QWERTY, NUMPAD, FUNCTION }; // layers
+enum { JANEK, NUMPAD, FUNCTION, QWERTY }; // layers
 
 /* This comment temporarily turns off astyle's indent enforcement
  *   so we can make the keymaps actually resemble the physical key layout better
@@ -130,7 +130,7 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
-  [QWERTY] = KEYMAP_STACKED
+  [JANEK] = KEYMAP_STACKED
   (Key_Backtick,  Key_1,           Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
    XXX,       Key_Q,           Key_W,       Key_D, Key_F, Key_Comma, Key_Tab,
    Key_LeftShift, Key_A,           Key_S,       Key_E, Key_T, Key_G,
@@ -138,7 +138,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftAlt,   Key_LeftControl, Key_LeftGui, LCTRL(Key_LeftShift),
    ShiftToLayer(FUNCTION),
 
-   M(MACRO_ANY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         Key_Delete,
+   LockLayer(QWERTY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         Key_Delete,
    Key_Enter,      Key_B,            Key_U,        Key_I,     Key_O,      Key_J,         Key_Minus,
    /*nokey*/       Key_Y,            Key_N,        Key_R,     Key_L,      Key_H, Key_RightShift,
    Key_Backspace,  Key_P,            Key_M,        Key_K,     Key_Period, Key_Slash,     Key_Equals,
@@ -174,7 +174,23 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    /*nokey*/   Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
    ___,        Consumer_VolumeDecrement, Key_Home,             Key_PageUp,            Key_PageDown,    Key_End,          Key_Semicolon,
    ___,        ___,                      ___,                  ___,
-   ___)
+   ___),
+
+
+  [QWERTY] = KEYMAP_STACKED
+  (___,             Key_1,         Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
+   Key_Backtick,    Key_Q,         Key_W,       Key_E, Key_R, Key_T, Key_Tab,
+   Key_PageUp,      Key_A,         Key_S,       Key_D, Key_F, Key_G,
+   Key_PageDown,    Key_Z,         Key_X,       Key_C, Key_V, Key_B, Key_Escape,
+   Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
+   ShiftToLayer(FUNCTION),
+
+   LockLayer(JANEK),   Key_6,       Key_7,        Key_8,     Key_9,      Key_0,         LockLayer(NUMPAD),
+   Key_Enter,      Key_Y,       Key_U,        Key_I,     Key_O,      Key_P,         Key_Equals,
+   /*nokey*/       Key_H,       Key_J,        Key_K,     Key_L,      Key_Semicolon, Key_Quote,
+   Key_RightAlt,   Key_N,       Key_M,        Key_Comma, Key_Period, Key_Slash,     Key_Minus,
+   Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
+   ShiftToLayer(FUNCTION)),
 
 };
 
