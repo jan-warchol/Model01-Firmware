@@ -131,8 +131,8 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [QWERTY] = KEYMAP_STACKED
-  (Key_Backtick,  Key_1,           Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
-   XXX,       Key_Q,           Key_W,       Key_D, Key_F, XXX, Key_Tab,
+  (Key_Escape,  Key_1,           Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
+   Key_Backtick,       Key_Q,           Key_W,       Key_D, Key_F, XXX, Key_Tab,
    Key_LeftShift, Key_A,           Key_S,       Key_E, Key_T, Key_G,
    Key_Backslash, Key_Z,           Key_Comma,       Key_X, Key_C, Key_V, Key_Backspace,
    Key_LeftAlt,   Key_LeftControl, Key_LeftGui, LCTRL(Key_LeftShift),
