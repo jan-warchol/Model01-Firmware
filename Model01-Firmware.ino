@@ -16,6 +16,8 @@
 // The Kaleidoscope core
 #include "Kaleidoscope.h"
 
+#include <Kaleidoscope-DualUse.h>
+
 // Support for keys that move the mouse
 #include "Kaleidoscope-MouseKeys.h"
 
@@ -135,7 +137,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Backtick,       Key_Q,           Key_W,       Key_D, Key_F, XXX, Key_Tab,
    Key_LeftShift, Key_A,           Key_S,       Key_E, Key_T, Key_G,
    Key_Backslash, Key_Z,           Key_Comma,       Key_X, Key_C, Key_V, Key_Backspace,
-   Key_LeftAlt,   Key_LeftControl, Key_LeftGui, LCTRL(Key_LeftShift),
+   Key_LeftAlt,   CTL_T(Escape), Key_LeftGui, LCTRL(Key_LeftShift),
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         Key_Delete,
@@ -293,6 +295,8 @@ void setup() {
   // The order can be important. For example, LED effects are
   // added in the order they're listed here.
   Kaleidoscope.use(
+    &DualUse,
+
     // The boot greeting effect pulses the LED button for 10 seconds after the keyboard is first connected
     &BootGreetingEffect,
 
