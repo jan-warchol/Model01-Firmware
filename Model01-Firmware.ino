@@ -18,6 +18,9 @@
 
 #include <Kaleidoscope-DualUse.h>
 
+#include <Kaleidoscope-OneShot.h>
+#include <kaleidoscope/hid.h>
+
 // Support for keys that move the mouse
 #include "Kaleidoscope-MouseKeys.h"
 
@@ -135,17 +138,17 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   [JANEK] = KEYMAP_STACKED
   (Key_Escape,  Key_1,           Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick,       Key_Q,           Key_W,       Key_D, Key_F, XXX, Key_Tab,
-   Key_LeftShift, Key_A,           Key_S,       Key_E, Key_T, Key_G,
+   OSM(LeftShift), Key_A,           Key_S,       Key_E, Key_T, Key_G,
    Key_Backslash, Key_Z,           Key_Comma,       Key_X, Key_C, Key_V, Key_Backspace,
    Key_LeftAlt,   CTL_T(Escape), Key_LeftGui, LCTRL(Key_LeftShift),
-   ShiftToLayer(FUNCTION),
+   OSL(FUNCTION),
 
    M(MACRO_ANY),   Key_6,            Key_7,        Key_8,     Key_9,      Key_0,         Key_Delete,
    Key_Enter,      Key_B,            Key_U,        Key_I,     Key_O,      Key_J,         Key_Minus,
-   /*nokey*/       Key_Y,            Key_N,        Key_R,     Key_L,      Key_H, Key_RightShift,
+   /*nokey*/       Key_Y,            Key_N,        Key_R,     Key_L,      Key_H, OSM(RightShift),
    Key_Backspace,  Key_P,            Key_M,        Key_K,     Key_Period, Key_Slash,     Key_Equals,
    LockLayer(QWERTY), Key_RightControl, Key_Spacebar, Key_RightAlt,
-   ShiftToLayer(FUNCTION)),
+   OSL(FUNCTION)),
 
   [QWERTY] = KEYMAP_STACKED
   (___,             Key_1,         Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
@@ -311,6 +314,8 @@ void setup() {
   // added in the order they're listed here.
   Kaleidoscope.use(
     &DualUse,
+
+    &OneShot,
 
     // The boot greeting effect pulses the LED button for 10 seconds after the keyboard is first connected
     &BootGreetingEffect,
