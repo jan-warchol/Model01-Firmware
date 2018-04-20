@@ -140,7 +140,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Backtick,   Key_Q,         Key_W,       Key_D, Key_F, XXX,   Key_Tab,
    OSM(LeftShift), Key_A,         Key_S,       Key_E, Key_T, Key_G, /*nokey*/
    Key_Backslash,  Key_Z,         Key_Comma,   Key_X, Key_C, Key_V, Key_Backspace,
-   Key_LeftAlt,    CTL_T(Escape), Key_LeftGui, LCTRL(Key_LeftShift),
+   Key_LeftAlt,    CTL_T(Escape), Key_LeftGui, XXX,
    OSL(FUNCTION),
 
    M(MACRO_ANY),      Key_6,            Key_7,        Key_8, Key_9,      Key_0,     Key_Delete,
@@ -197,11 +197,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (Key_F12, Key_F1,     Key_F2,      Key_F3,     Key_F4,        Key_F5,           LockLayer(DFLT_QWER),
-   ___,     ___,        Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, LSHIFT(Key_Tab),
-   ___,     Key_mouseL, Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,  /*nokey*/
-   ___,     ___,        Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  ___,
-   ___,     ___,        ___,         ___,
+  (Key_F12, Key_F1,        Key_F2,      Key_F3,     Key_F4,        Key_F5,           LockLayer(DFLT_QWER),
+   ___,     ___,           Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, LSHIFT(Key_Tab),
+   ___,     Key_mouseL,    Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,  /*nokey*/
+   ___,     LSHIFT(Key_Z), Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  ___,
+   ___,     ___,           ___,         ___,
    ___,
 
    Key_F11,  Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          ___,
