@@ -147,7 +147,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter,      Key_B,            Key_U,        Key_I,     Key_O,      Key_J,         Key_Minus,
    /*nokey*/       Key_Y,            Key_N,        Key_R,     Key_L,      Key_H, OSM(RightShift),
    Key_Backspace,  Key_P,            Key_M,        Key_K,     Key_Period, Key_Slash,     Key_Equals,
-   LockLayer(QWERTY), Key_RightControl, Key_Spacebar, Key_RightAlt,
+   LockLayer(QWERTY), Key_RightControl, Key_Spacebar, OSM(RightAlt),
    OSL(FUNCTION)),
 
   [QWERTY] = KEYMAP_STACKED
