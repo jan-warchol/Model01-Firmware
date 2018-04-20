@@ -147,7 +147,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter,         Key_B,            Key_U,        Key_I, Key_O,      Key_J,     Key_Minus,
    /*nokey*/          Key_Y,            Key_N,        Key_R, Key_L,      Key_H,     OSM(RightShift),
    Key_Backspace,     Key_P,            Key_M,        Key_K, Key_Period, Key_Slash, Key_Equals,
-   LockLayer(NAVIG), Key_RightControl, Key_Spacebar, OSM(RightAlt),
+   Key_RightControl,  LockLayer(NAVIG), Key_Spacebar, OSM(RightAlt),
    OSL(FUNCTION)),
 
   [DFLT_QWER] = KEYMAP_STACKED
@@ -206,8 +206,8 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
    Key_F11,  Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          ___,
    ___,      ___,                      Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, ___,
-   /*nokey*/ Consumer_VolumeIncrement, ___,                  ___,                   ___,             ___,              Key_Quote,
-   ___,      Consumer_VolumeDecrement, ___,                  ___,                   ___,             ___,              Key_Semicolon,
+   /*nokey*/ Consumer_VolumeIncrement, Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow,   Key_Quote,
+   ___,      Consumer_VolumeDecrement, Key_Home,      Key_PageUp,    Key_PageDown, Key_End,          Key_Semicolon,
    ___,      ___,                      ___,                  ___,
    ___),
 
@@ -219,11 +219,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___, ___, ___, ___,
    ___,
 
-   ___, ___, ___,           ___,           ___,          ___,            ___,
-   ___, ___, ___,           ___,           ___,          ___,            ___,
-   /**/ ___, Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow, ___,
-   ___, ___, Key_Home,      Key_PageUp,    Key_PageDown, Key_End,        ___,
-   ___, ___, ___,           ___,
+   ___, ___,              ___,           ___,           ___,          ___,            ___,
+   ___, ___,              ___,           ___,           ___,          ___,            ___,
+   /**/ LockLayer(NAVIG), Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow, ___,
+   ___, ___,              Key_Home,      Key_PageUp,    Key_PageDown, Key_End,        ___,
+   ___, ___,              ___,           ___,
    ___)
 };
 
