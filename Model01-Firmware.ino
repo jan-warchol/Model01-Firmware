@@ -162,7 +162,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter,    Key_Y,       Key_U,        Key_I,     Key_O,      Key_P,         Key_Equals,
    /*nokey*/     Key_H,       Key_J,        Key_K,     Key_L,      Key_Semicolon, Key_Quote,
    Key_RightAlt, Key_N,       Key_M,        Key_Comma, Key_Period, Key_Slash,     Key_Minus,
-   ___,          Key_LeftAlt, Key_Spacebar, Key_RightControl,
+   Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
    ShiftToLayer(DFLT_FN)),
 
   [DFLT_FN] =  KEYMAP_STACKED
