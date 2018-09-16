@@ -139,7 +139,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   (Key_Escape,     Key_1,         Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick,   Key_Q,         Key_W,       Key_D, Key_F, Key_Comma,   Key_Tab,
    Key_LeftShift, Key_A,         Key_S,       Key_E, Key_T, Key_G, /*nokey*/
-   Key_Backslash,  Key_Z,         Key_J,   Key_X, Key_C, Key_V, Key_Backspace,
+   Key_Backslash,  Key_Z,         Key_X,   Key_V, Key_C, Key_J, Key_Backspace,
    Key_LeftAlt,    CTL_T(Escape), Key_LeftGui, XXX,
    ShiftToLayer(FUNCTION),
 
