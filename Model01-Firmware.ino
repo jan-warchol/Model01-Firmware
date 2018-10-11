@@ -126,7 +126,7 @@ enum { MACRO_VERSION_INFO,
   *
   */
 
-enum { JANEK, DFLT_QWER, DFLT_FN, NUMPAD, FUNCTION, NAVIG }; // layers
+enum { JANEK, DFLT_QWER, DFLT_FN, NUMPAD, FUNCTION, RALT }; // layers
 
 /* This comment temporarily turns off astyle's indent enforcement
  *   so we can make the keymaps actually resemble the physical key layout better
@@ -147,7 +147,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter,         Key_Period,            Key_U,        Key_I, Key_O,      Key_B,     Key_Minus,
    /*nokey*/          Key_Y,            Key_N,        Key_R, Key_L,      Key_H,     Key_RightShift,
    Key_Backspace,     Key_P,            Key_M,        Key_K, Key_J, Key_Slash, Key_Equals,
-   Key_RightControl,  XXX, Key_Spacebar, Key_RightAlt,
+   Key_RightControl,  ShiftToLayer(RALT), Key_Spacebar, Key_RightAlt,
    ShiftToLayer(FUNCTION)),
 
   [DFLT_QWER] = KEYMAP_STACKED
@@ -211,7 +211,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,      ___,                      ___,                  ___,
    ___),
 
-  [NAVIG] =  KEYMAP_STACKED
+  [RALT] =  KEYMAP_STACKED
   (___, ___, ___, ___, ___, ___, ___,
    ___, ___, ___, ___, ___, ___, ___,
    ___, ___, ___, ___, ___, ___, /**/
@@ -221,8 +221,8 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
    ___, ___,              ___,           ___,           ___,          ___,            ___,
    ___, ___,              ___,           ___,           ___,          ___,            ___,
-   /**/ ShiftToLayer(NAVIG), Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow, ___,
-   ___, ___,              Key_Home,      Key_PageUp,    Key_PageDown, Key_End,        ___,
+   /**/ ___, ___, ___, ___, ___, ___,
+   ___, ___,              ___, ___, ___, ___, ___,
    ___, ___,              ___,           ___,
    ___)
 };
