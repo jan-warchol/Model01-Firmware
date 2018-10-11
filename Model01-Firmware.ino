@@ -136,18 +136,18 @@ enum { JANEK, DFLT_QWER, DFLT_FN, NUMPAD, FUNCTION, RALT }; // layers
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [JANEK] = KEYMAP_STACKED
-  (Key_Escape,     Key_1,         Key_2,       Key_3, Key_4, Key_5, Key_LEDEffectNext,
-   Key_Backtick,   Key_Q,         Key_W,       Key_D, Key_F, Key_Comma,   Key_Tab,
-   Key_LeftShift, Key_A,         Key_S,       Key_E, Key_T, Key_G, /*nokey*/
-   Key_Backslash,  Key_Z,         Key_X,   Key_V, Key_C, XXX, Key_Backspace,
-   Key_LeftAlt,    CTL_T(Escape), Key_LeftGui, XXX,
+  (Key_Escape,    Key_1,         Key_2,       Key_3, Key_4, Key_5,     Key_LEDEffectNext,
+   Key_Backtick,  Key_Q,         Key_W,       Key_D, Key_F, Key_Comma, Key_Tab,
+   Key_LeftShift, Key_A,         Key_S,       Key_E, Key_T, Key_G,     /*nokey*/
+   Key_Backslash, Key_Z,         Key_X,       Key_V, Key_C, XXX,       Key_Backspace,
+   Key_LeftAlt,   CTL_T(Escape), Key_LeftGui, XXX,
    ShiftToLayer(FUNCTION),
 
-   M(MACRO_ANY),      Key_6,            Key_7,        Key_8, Key_9,      Key_0,     Key_Delete,
-   Key_Enter,         Key_Period,            Key_U,        Key_I, Key_O,      Key_B,     Key_Minus,
-   /*nokey*/          Key_Y,            Key_N,        Key_R, Key_L,      Key_H,     Key_RightShift,
-   Key_Backspace,     Key_P,            Key_M,        Key_K, Key_J, Key_Slash, Key_Equals,
-   Key_RightControl,  ShiftToLayer(RALT), Key_Spacebar, Key_RightAlt,
+   M(MACRO_ANY),     Key_6,              Key_7,        Key_8, Key_9, Key_0,     Key_Delete,
+   Key_Enter,        Key_Period,         Key_U,        Key_I, Key_O, Key_B,     Key_Minus,
+   /*nokey*/         Key_Y,              Key_N,        Key_R, Key_L, Key_H,     Key_RightShift,
+   Key_Backspace,    Key_P,              Key_M,        Key_K, Key_J, Key_Slash, Key_Equals,
+   Key_RightControl, ShiftToLayer(RALT), Key_Spacebar, Key_RightAlt,
    ShiftToLayer(FUNCTION)),
 
   [DFLT_QWER] = KEYMAP_STACKED
@@ -158,10 +158,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
    ShiftToLayer(DFLT_FN),
 
-   M(MACRO_ANY), Key_6,       Key_7,        Key_8,     Key_9,      Key_0,         LockLayer(NUMPAD),
-   Key_Enter,    Key_Y,       Key_U,        Key_I,     Key_O,      Key_P,         Key_Equals,
-   /*nokey*/     Key_H,       Key_J,        Key_K,     Key_L,      Key_Semicolon, Key_Quote,
-   Key_RightAlt, Key_N,       Key_M,        Key_Comma, Key_Period, Key_Slash,     Key_Minus,
+   M(MACRO_ANY),   Key_6,       Key_7,        Key_8,     Key_9,      Key_0,         LockLayer(NUMPAD),
+   Key_Enter,      Key_Y,       Key_U,        Key_I,     Key_O,      Key_P,         Key_Equals,
+   /*nokey*/       Key_H,       Key_J,        Key_K,     Key_L,      Key_Semicolon, Key_Quote,
+   Key_RightAlt,   Key_N,       Key_M,        Key_Comma, Key_Period, Key_Slash,     Key_Minus,
    Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
    ShiftToLayer(DFLT_FN)),
 
@@ -206,8 +206,8 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
    Key_F11,  Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          ___,
    ___,      ___,                      Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, ___,
-   /*nokey*/ Consumer_VolumeIncrement, Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow,   Key_Quote,
-   ___,      Consumer_VolumeDecrement, Key_Home,      Key_PageUp,    Key_PageDown, Key_End,          Key_Semicolon,
+   /*nokey*/ Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
+   ___,      Consumer_VolumeDecrement, Key_Home,             Key_PageUp,            Key_PageDown,    Key_End,          Key_Semicolon,
    ___,      ___,                      ___,                  ___,
    ___),
 
@@ -219,11 +219,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___, ___, ___, ___,
    ___,
 
-   ___, ___,              ___,           ___,           ___,          ___,            ___,
-   ___, ___,              ___,           ___,           ___,          ___,            ___,
+   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___, ___, ___, ___,
    /**/ ___, ___, ___, ___, ___, ___,
-   ___, ___,              ___, ___, ___, ___, ___,
-   ___, ___,              ___,           ___,
+   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___,
    ___)
 };
 
