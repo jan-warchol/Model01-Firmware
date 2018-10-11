@@ -147,7 +147,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter,         Key_Period,            Key_U,        Key_I, Key_O,      Key_B,     Key_Minus,
    /*nokey*/          Key_Y,            Key_N,        Key_R, Key_L,      Key_H,     Key_RightShift,
    Key_Backspace,     Key_P,            Key_M,        Key_K, Key_J, Key_Slash, Key_Equals,
-   Key_RightControl,  LockLayer(NAVIG), Key_Spacebar, Key_RightAlt,
+   Key_RightControl,  XXX, Key_Spacebar, Key_RightAlt,
    ShiftToLayer(FUNCTION)),
 
   [DFLT_QWER] = KEYMAP_STACKED
@@ -221,7 +221,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
    ___, ___,              ___,           ___,           ___,          ___,            ___,
    ___, ___,              ___,           ___,           ___,          ___,            ___,
-   /**/ LockLayer(NAVIG), Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow, ___,
+   /**/ ShiftToLayer(NAVIG), Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow, ___,
    ___, ___,              Key_Home,      Key_PageUp,    Key_PageDown, Key_End,        ___,
    ___, ___,              ___,           ___,
    ___)
