@@ -147,7 +147,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter,        Key_Period,         Key_U,        Key_I, Key_O, Key_B,     Key_Minus,
    /*nokey*/         Key_Y,              Key_N,        Key_R, Key_L, Key_H,     Key_RightShift,
    Key_Backspace,    Key_P,              Key_M,        Key_K, Key_J, Key_Slash, Key_Equals,
-   Key_RightControl, ShiftToLayer(RALT), Key_Spacebar, Key_RightAlt,
+   Key_RightControl, Key_RightAlt,       Key_Spacebar, ShiftToLayer(RALT),
    ShiftToLayer(FUNCTION)),
 
   [DFLT_QWER] = KEYMAP_STACKED
@@ -204,26 +204,26 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,     ___,           ___,         ___,
    ___,
 
-   Key_F11,  Key_F6,                   Key_F7,               Key_F8,                Key_F9,          Key_F10,          ___,
-   ___,      ___,                      Key_LeftCurlyBracket, Key_RightCurlyBracket, Key_LeftBracket, Key_RightBracket, ___,
-   /*nokey*/ Consumer_VolumeIncrement, Key_LeftArrow,        Key_DownArrow,         Key_UpArrow,     Key_RightArrow,   Key_Quote,
-   ___,      Consumer_VolumeDecrement, Key_Home,             Key_PageUp,            Key_PageDown,    Key_End,          Key_Semicolon,
-   ___,      ___,                      ___,                  ___,
+   Key_F11,  Key_F6,                   Key_F7,        Key_F8,        Key_F9,       Key_F10,        ___,
+   ___,      ___,                      ___,           ___,           ___,          ___,            ___,
+   /*nokey*/ Consumer_VolumeIncrement, Key_LeftArrow, Key_DownArrow, Key_UpArrow,  Key_RightArrow, ___,
+   ___,      Consumer_VolumeDecrement, Key_Home,      Key_PageUp,    Key_PageDown, Key_End,        ___,
+   ___,      ___,                      ___,           ___,
    ___),
 
   [RALT] =  KEYMAP_STACKED
-  (___,                  ___,           ___,           ___,                   ___,         ___, ___,
-   LSHIFT(Key_Backtick), LSHIFT(Key_1), ___,           ___,                   ___,         ___, ___,
-   ___,                  RALT(Key_A),   RALT(Key_S),   RALT(Key_E),           ___,         ___, /*nokey*/
-   ___,                  RALT(Key_Z),   RALT(Key_X),   ___,                   RALT(Key_C), ___, ___,
-   ___,                  ___,           ___,           ___,
+  (___,                  ___,           ___,                   ___,                   ___,              ___,               ___,
+   LSHIFT(Key_Backtick), LSHIFT(Key_1), ___,                   Key_LeftBracket,       Key_RightBracket, ___,               ___,
+   ___,                  RALT(Key_A),   RALT(Key_S),           RALT(Key_E),           ___,              ___,               /*nokey*/
+   ___,                  RALT(Key_Z),   RALT(Key_X),           ___,                   RALT(Key_C),      ___,               ___,
+   ___,                  ___,           ___,                   ___,
    ___,
 
-   ___,                  ___,           ___,           ___,                   ___,         ___, ___,
-   ___,                  ___,           ___,           LSHIFT(Key_Semicolon), RALT(Key_O), ___, ___,
-   /*nokey*/             ___,           LSHIFT(Key_0), LSHIFT(Key_9),         RALT(Key_L), ___, ___,
-   ___,                  RALT(Key_P),   ___,           ___,                   ___,         ___, ___,
-   ___,                  ___,           ___,           ___,
+   ___,                  ___,           ___,                   ___,                   ___,              ___,               ___,
+   ___,                  ___,           ___,                   LSHIFT(Key_Semicolon), RALT(Key_O),      ___,               LSHIFT(Key_Equals),
+   /*nokey*/             RALT(Key_P),   LSHIFT(Key_0),         LSHIFT(Key_9),         RALT(Key_L),      Key_Quote,         ___,
+   ___,                  RALT(Key_N),   Key_RightCurlyBracket, Key_LeftCurlyBracket,  Key_Semicolon,    LSHIFT(Key_Quote), ___,
+   ___,                  ___,           ___,                   ___,
    ___)
 };
 
