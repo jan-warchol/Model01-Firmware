@@ -16,10 +16,6 @@
 // The Kaleidoscope core
 #include "Kaleidoscope.h"
 
-#include <Kaleidoscope-DualUse.h>
-#include <Kaleidoscope-OneShot.h>
-#include <kaleidoscope/hid.h>
-
 // Support for storing the keymap in EEPROM
 #include "Kaleidoscope-EEPROM-Settings.h"
 #include "Kaleidoscope-EEPROM-Keymap.h"
@@ -180,14 +176,14 @@ KEYMAPS(
    Key_Backtick,  Key_Q,         Key_W,       Key_D, Key_F, Key_Comma, Key_Tab,
    Key_LeftShift, Key_A,         Key_S,       Key_E, Key_T, Key_G,     /*nokey*/
    Key_Backslash, Key_Z,         Key_X,       Key_V, Key_C, XXX,       XXX,
-   Key_LeftAlt,   CTL_T(Escape), Key_LeftGui, XXX,
+   Key_LeftAlt,   Key_LeftControl, Key_LeftGui, XXX,
    ShiftToLayer(FUNCTION),
 
    Key_5,            Key_6,              Key_7,        Key_8, Key_9, Key_0,     Key_Delete,
    Key_Enter,        Key_Period,         Key_U,        Key_I, Key_O, Key_B,     Key_Minus,
    /*nokey*/         Key_Y,              Key_N,        Key_R, Key_L, Key_H,     Key_RightShift,
    Key_Backspace,    Key_P,              Key_M,        Key_K, Key_J, Key_Slash, Key_Equals,
-   Key_RightControl, Key_RightAlt,       Key_Spacebar, ShiftToLayer(RALT),
+   Key_RightAlt, Key_Spacebar,       Key_Spacebar, ShiftToLayer(RALT),
    ShiftToLayer(FUNCTION)),
 
   [DFLT_QWER] = KEYMAP_STACKED
@@ -418,8 +414,6 @@ USE_MAGIC_COMBOS({.action = toggleKeyboardProtocol,
 // The order can be important. For example, LED effects are
 // added in the order they're listed here.
 KALEIDOSCOPE_INIT_PLUGINS(
-  DualUse,
-  OneShot,
   // The EEPROMSettings & EEPROMKeymap plugins make it possible to have an
   // editable keymap in EEPROM.
   EEPROMSettings,
